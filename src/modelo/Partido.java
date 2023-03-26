@@ -60,12 +60,12 @@ public class Partido {
 
 
 
-	public static ResultadoEnum resultado (Equipo equipo1) {
-		if () {
-			return resultado
-		}
-		
-	}
+//	public static ResultadoEnum resultado (Equipo equipo1) {
+//		if () {
+//			return resultado
+//		}
+//		
+//	}
 	
 	
 	

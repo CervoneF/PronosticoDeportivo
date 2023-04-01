@@ -1,6 +1,8 @@
 
 package modelo;
 
+import modelo.ResultadoEnum.Resultados;
+
 public class Partido {
 	
 	Equipo equipo1= new Equipo();
@@ -57,17 +59,40 @@ public class Partido {
 	public void setGolesEquipo2(int golesEquipo2) {
 		this.golesEquipo2 = golesEquipo2;
 	}
+	
+	public String toString() {
+	    return "Equipo uno: " + getEquipo1().getNombre() + " que metió " + getGolesEquipo1() + " goles." +
+	    		" - Equipo dos: " + getEquipo2().getNombre() + " que metió " + getGolesEquipo2() + " goles.";
+	}
 
+	
+	public Resultados resultado (Equipo equipo) {
 
+		if (equipo.getNombre().equals(this.equipo1.getNombre())) {
 
-//	public static ResultadoEnum resultado (Equipo equipo1) {
-//		if () {
-//			return resultado
-//		}
-//		
-//	}
+			if (this.golesEquipo1 > this.golesEquipo2) {
+				return Resultados.GANADOR;
+			}
+			if (this.golesEquipo1 < this.golesEquipo2) {
+				return Resultados.PERDEDOR;
+			}
+		}
+		if (equipo.getNombre().equals(this.equipo2.getNombre())) {
+			if (this.golesEquipo2 > this.golesEquipo1) {
+				return Resultados.GANADOR;
+				}
+			if (this.golesEquipo2 < this.golesEquipo1) {
+				return Resultados.PERDEDOR;
+			}
+			
+		} 
+		return Resultados.EMPATE;
+		
+		}
+		
 	
 	
 	
-
 }
+
+

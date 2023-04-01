@@ -30,7 +30,7 @@ public class Equipo {
 		this.descripcion = descripcion;
 	}
 	
-	
+
 	
 	
 
